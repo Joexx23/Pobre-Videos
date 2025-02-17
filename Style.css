@@ -13,14 +13,16 @@ main {
 
 .movies {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Garante que os filmes fiquem lado a lado */
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     padding: 10px;
+    overflow-x: auto; /* Permite rolagem horizontal no mobile */
 }
 
 .movie {
     width: 30%;
+    min-width: 120px; /* Mantém um tamanho mínimo para os filmes */
     transition: transform 0.3s ease;
 }
 
@@ -33,21 +35,17 @@ main {
     border-radius: 15px;
 }
 
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #111;
-    font-size: 0.8em;
-    border-top: 2px solid #444;
-}
-
 header {
     background-color: #111;
     color: #d1d1d1;
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 15px;
+    font-size: 1.3em;
     font-weight: bold;
     text-align: center;
+}
+
+.logo {
+    max-width: 120px; /* Reduzindo o tamanho da logo */
 }
 
 nav.menu {
@@ -56,6 +54,7 @@ nav.menu {
     text-align: center;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 100;
 }
 
@@ -65,16 +64,17 @@ nav.menu ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav.menu ul li {
-    margin-right: 20px;
+    margin: 10px;
 }
 
 nav.menu ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     font-weight: bold;
     display: block;
     border-radius: 5px;
@@ -86,133 +86,23 @@ nav.menu ul li a:hover {
     transform: scale(1.1);
 }
 
-.filme-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    max-width: 100%;
-    margin: auto;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-}
-
-.filme-poster img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 15px rgba(95, 95, 95, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.filme-poster img:hover {
-    transform: scale(1.1);
-}
-
-.filme-info {
-    max-width: 90%;
-    text-align: center;
-}
-
-.filme-info h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.sinopse {
-    font-size: 14px;
-    color: #ebebeb;
-    margin-bottom: 15px;
-}
-
-.filme-info p {
-    font-size: 12px;
-    margin: 5px 0;
-}
-
-.btn-play {
-    display: inline-block;
-    background-color: #0061e0;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn-play:hover {
-    background-color: #004bb5;
-    transform: scale(1.1);
-}
-
-.temporadas h3 {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.temporadas ul {
-    list-style: none;
-    padding: 0;
-}
-
-.temporadas ul li {
-    margin: 5px 0;
-}
-
-.temporadas ul li a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.temporadas ul li a:hover {
-    text-decoration: underline;
-    color: #ffaa00;
-}
-
 @media (max-width: 768px) {
     .movies {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        flex-wrap: nowrap; /* Mantém os filmes lado a lado */
+        overflow-x: auto; /* Garante rolagem horizontal caso necessário */
     }
 
     .movie {
-        width: 45%;
-        flex: 0 0 auto;
+        width: 30%;
+        min-width: 100px; /* Ajustando melhor o tamanho */
     }
 
-    .filme-container {
-        padding: 20px;
+    header {
+        font-size: 1.1em;
+        padding: 10px;
     }
 
-    .filme-poster img {
-        max-width: 300px;
-    }
-
-    .filme-info h2 {
-        font-size: 18px;
-    }
-
-    .sinopse {
-        font-size: 12px;
-    }
-
-    .btn-play {
-        padding: 10px 16px;
+    .logo {
+        max-width: 90px;
     }
 }
-
-nav.menu ul li a[href*="Ao Vivo"] {
-    display: none;
-}
-
-header {
-    font-size: 1.2em;
-    padding: 15px;
-}
-
