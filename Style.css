@@ -176,13 +176,13 @@ nav.menu ul li a:hover {
 @media (max-width: 768px) {
     .movies {
         display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
     .movie {
-        width: 40%;
+        width: 45%;
         flex: 0 0 auto;
     }
 
@@ -213,4 +213,6 @@ nav.menu ul li a[href*="Ao Vivo"] {
 
 header {
     font-size: 1.2em;
+    padding: 15px;
 }
+
