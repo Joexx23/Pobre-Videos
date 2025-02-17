@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            background: #222;
+            border-radius: 15px;
+           
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .conta-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .conta-opcao {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 20px;
+        }
+
+        .conta-opcao:hover {
+            background: #444;
+            transform: scale(1.05);
+        }
+
+        .conta-opcao img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #f7f7f7;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007cb6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0058cc;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="selecaoConta">
+        <h2>Selecione sua Conta</h2>
+        <div class="conta-lista">
+            <div class="conta-opcao" onclick="selecionarConta('user1', 'user1.jpg')">
+                <img src="imagens/perfilminiye.jpg" alt="Usuário 1">
+                <span>Amoung West</span>
+            </div>
+            <div class="conta-opcao" onclick="selecionarConta('user2', 'user2.jpg')">
+                <img src="imagens/perfilcoelhorosa.jpg" alt="Usuário 2">
+                <span>Coelho Gta</span>
+            </div>
+            <div class="conta-opcao" onclick="selecionarConta('user3', 'user3.jpg')">
+                <a href="index.html">
+                <img src="imagens/perfildinossauro.jpeg" alt="Usuário 3"></a>
+                <span>Yoshi Pansudo</span>
+            </div>
+           
+    
+    
