@@ -13,24 +13,28 @@
             padding: 0;
         }
         .container {
-            width: 60%;
+            width: 100%;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
         }
         .header {
             display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
         }
         .header img {
-            width: 100px;
-            margin-right: 20px;
+            width: 80px;
+            margin-right: 15px;
         }
         .title {
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
         }
         .info {
             margin-top: 10px;
+            text-align: center;
         }
         .tag {
             background: rgb(204, 39, 39);
@@ -38,35 +42,41 @@
             padding: 5px 10px;
             border-radius: 5px;
             font-weight: bold;
+            display: inline-block;
         }
         .description {
             margin-top: 10px;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            text-align: justify;
         }
         .episode {
             margin-top: 20px;
             padding: 10px;
             background: #222;
             border-radius: 10px;
+            text-align: center;
         }
         .button {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 15px;
-            background: red;
-            color: white;
+            background: rgb(255, 255, 255);
+            color: rgb(27, 27, 27);
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
         }
         .season-selector {
             margin-top: 20px;
+            text-align: center;
         }
         .season-selector select {
-            padding: 5px;
+            padding: 8px;
             font-size: 1em;
             border-radius: 5px;
             border: none;
+            width: 100%;
+            max-width: 200px;
         }
         .trailer {
             margin-top: 20px;
@@ -75,8 +85,34 @@
         .trailer iframe {
             width: 100%;
             max-width: 560px;
-            height: 315px;
+            height: auto;
+            aspect-ratio: 16 / 9;
             border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header img {
+                width: 60px;
+                margin-bottom: 10px;
+            }
+            .title {
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 15px;
+            }
+            .description {
+                font-size: 1em;
+            }
+            .button {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -84,7 +120,7 @@
     <div class="container">
         <div class="header">
             <a href="index.html">
-            <img src="imagens/logorebrannd.jpg" alt="Netflix">
+                <img src="imagens/logorebrannd.jpg" alt="Netflix">
             </a>
             <div class="title">BOJACK CAVALO</div>
         </div>
@@ -98,32 +134,30 @@
             <label for="season">Temporada:</label>
             <select id="season">
                 <option value="1">Temporada 1</option>
-                <option value="2">Temporada 2 <a href="bojack2.html"></a></option>
+                <option value="2">Temporada 2</option>
             </select>
         </div>
         <div class="trailer">
-            <h3></h3>
             <iframe src="https://www.youtube.com/embed/LFz_RbJbchI" title="BoJack Horsemask Intro Parody"></iframe>
         </div>
+        
         <div class="episode">
             <h3>T1:E1 História de BoJack Cavalo</h3>
-            <p>BoJack contarta uma escritora fantasma para ajuda-lo a escrever a sua autobiografia.</p>
+            <p>BoJack contrata uma escritora fantasma para ajudá-lo a escrever sua autobiografia.</p>
+            <a href="https://www.youtube.com/embed/VtUWD7g4Qlg" class="button">Assistir</a>
         </div>
-        <a href="https://www.youtube.com/embed/VtUWD7g4Qlg"  class="button">Assistir</a>
     
         <div class="episode">
             <h3>T1:E2 A filha pródiga</h3>
-            <p>BoJack contarta uma escritora fantasma para ajuda-lo a escrever a sua autobiografia..</p>
+            <p>BoJack enfrenta problemas ao tentar se reconectar com sua filha.</p>
+            <a href="https://www.youtube.com/embed/XHWt9v_7YfQ" class="button">Assistir</a>
         </div>
         
-        <a href="https://www.youtube.com/embed/XHWt9v_7YfQ" class="button">Assistir</a>
-    
         <div class="episode">
-            <h3>T1:E3 Entra Zoa e Zelda </h3>
-            <p>BoJack contarta uma escritora fantasma para ajuda-lo a escrever a sua autobiografia.</p>
+            <h3>T1:E3 Entra Zoa e Zelda</h3>
+            <p>BoJack reflete sobre sua fama e tenta melhorar sua vida pessoal.</p>
+            <a href="#" class="button">Assistir</a>
         </div>
-        <a href="#" class="button">Assistir</a>
-    
     </div>
 </body>
 </html>
