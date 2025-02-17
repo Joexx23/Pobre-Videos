@@ -12,14 +12,15 @@ main {
 }
 
 .movies {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .movie {
-    width: 250px; /* Aumenta o tamanho da imagem */
+    width: 100%;
     transition: transform 0.3s ease;
 }
 
@@ -103,17 +104,18 @@ nav.menu ul li a:hover {
 
 .filme-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 30px;
-    max-width: 900px;
+    max-width: 100%;
     margin: auto;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Gradiente entre o trailer e a tela */
 }
 
 .filme-poster img {
-    width: 400px; /* Aumenta o tamanho da imagem */
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 4px 4px 15px rgba(95, 95, 95, 0.5);
     transition: transform 0.3s ease;
@@ -124,22 +126,23 @@ nav.menu ul li a:hover {
 }
 
 .filme-info {
-    max-width: 500px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .filme-info h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .sinopse {
-    font-size: 16px;
+    font-size: 14px;
     color: #ebebeb;
     margin-bottom: 15px;
 }
 
 .filme-info p {
-    font-size: 14px;
+    font-size: 12px;
     margin: 5px 0;
 }
 
@@ -162,7 +165,7 @@ nav.menu ul li a:hover {
 
 .temporadas h3 {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .temporadas ul {
@@ -186,71 +189,31 @@ nav.menu ul li a:hover {
     color: #ffaa00;
 }
 
-@media(max-width: 750px) {
+@media (max-width: 768px) {
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 5px;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esportes - Streaming</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #eeeeee;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-        .header {
-            padding: 15px 0;
-            font-size: 1.8em;
-            font-weight: bold;
-        }
-        .sports-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .sport-card {
-            background: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            max-width: 280px;
-        }
-        .sport-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .sport-card h3 {
-            margin-top: 8px;
-            font-size: 1em;
-        }
-        .watch-button {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 8px 12px;
-            background: red;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        @media (max-width: 600px) {
-            .sport-card {
-                width: 90%;
-            }
-            .container {
-                width: 95%;
-            }
-        }
+    .filme-container {
+        padding: 20px;
+    }
+
+    .filme-poster img {
+        max-width: 300px;
+    }
+
+    .filme-info h2 {
+        font-size: 18px;
+    }
+
+    .sinopse {
+        font-size: 12px;
+    }
+
+    .btn-play {
+        padding: 10px 16px;
+    }
+}
+
   
