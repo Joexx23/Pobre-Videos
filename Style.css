@@ -15,7 +15,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
 }
 
@@ -191,12 +191,14 @@ nav.menu ul li a:hover {
 
 @media (max-width: 768px) {
     .movies {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
     }
 
     .movie {
-        width: 30%;
+        width: 60%;
+        flex: 0 0 auto;
     }
 
     .filme-container {
@@ -219,4 +221,3 @@ nav.menu ul li a:hover {
         padding: 10px 16px;
     }
 }
-
