@@ -13,18 +13,22 @@ main {
 
 .movies {
     display: flex;
-    flex-wrap: nowrap; /* Garante que os filmes fiquem lado a lado */
-    justify-content: center;
+    flex-wrap: nowrap; /* Mantém os filmes sempre em linha */
+    justify-content: flex-start; /* Garante alinhamento à esquerda */
     gap: 15px;
     padding: 10px;
-    overflow-x: auto; /* Permite rolagem horizontal no mobile */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    white-space: nowrap; /* Evita quebra de linha */
+    scrollbar-width: thin; /* Personaliza a barra de rolagem em alguns navegadores */
 }
 
 .movie {
-    width: 30%;
-    min-width: 120px; /* Mantém um tamanho mínimo para os filmes */
+    flex: 0 0 auto; /* Garante que os filmes não encolham */
+    width: 200px; /* Define um tamanho fixo */
+    min-width: 150px; /* Garante que cada filme tenha um tamanho mínimo */
     transition: transform 0.3s ease;
 }
+
 
 .movie:hover {
     transform: scale(1.05);
@@ -86,17 +90,17 @@ nav.menu ul li a:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    .movies {
-        flex-wrap: nowrap; /* Mantém os filmes lado a lado */
-        overflow-x: auto; /* Garante rolagem horizontal caso necessário */
-    }
 
-    .movie {
-        width: 30%;
-        min-width: 100px; /* Ajustando melhor o tamanho */
-    }
-
+    @media (max-width: 768px) {
+        .movies {
+            padding: 10px 5px; /* Ajusta o espaçamento em telas menores */
+            gap: 10px; /* Reduz a distância entre os filmes */
+        }
+    
+        .movie {
+            width: 140px; /* Filmes menores para caber melhor */
+            min-width: 120px;
+        }
     header {
         font-size: 1.1em;
         padding: 10px;
